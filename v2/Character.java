@@ -16,13 +16,12 @@ public class Character {
     HP = HP- loss;
   }
 
-	protected int attack(Character monster) {
-	    int damage = 0;
-	    if (isAlive() && ((strength * attackRating) - defense) > 0) {
-		damage = (int) ((strength * attackRating) - monster.getDefense());
-	    }
-	    monster.lowerHP(damage);
-	    return damage; 
-	}
-  
+  protected int attack(Character target) {
+    int damage = (int)(strength * attackRating) - target.getDefense();
+    if (damage < 0) {
+    	damage = 0;
+    }
+    target.lowerHP(damage);
+    return damage; 
+  } 
 }
