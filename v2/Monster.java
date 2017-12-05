@@ -6,6 +6,11 @@ public class Monster extends Character {
 		defense = 20;
 		attackRating = 1;
 	}
+    public String toString(){
+	return super.toString()+" ";
+    }
+
+    
 
 	}
 
