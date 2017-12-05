@@ -1,11 +1,14 @@
 public class Protagonist extends Character {
-    private String name;
+    protected String name;
+    protected int baseDefense;
+    protected int baseStrength;
 
     public Protagonist(String s) {
+    	// base stats
         name = s;
         HP = 250;
-        strength = (int)(20 + 45 * Math.random());
-        defense = 40;
+        baseStrength = strength = (int)(20 + 45 * Math.random());
+        baseDefense = defense = 40;
         attackRating = 0.4;
     }
 
@@ -15,11 +18,11 @@ public class Protagonist extends Character {
 
     public void specialize() {
 		defense -= 5;
-		attackRating += 0.5;
+		strength += 15;
      }
 
     public void normalize() {
-		defense = 75;
-		attackRating = 0.4;
+		defense = baseDefense;
+		strength = baseStrength;
     }
 }
