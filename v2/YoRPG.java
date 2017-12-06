@@ -72,36 +72,36 @@ public class YoRPG
 	    name = in.readLine();
     } catch ( IOException e ) { }
 
-    s = "\nWhat path will thou choose?: \n";
-    s += "\t1: Path of the Knight\n";
-    s += "\t\t Superior defense stats\n";
-    s += "\t2: Path of the Gladiator\n";
-    s += "\t\t Unrivaled in strength\n";
-    s += "\t3: Path of the Archer\n";
-    s += "\t\t Effective attacks and special attacks\n";
-    s += "\t4: Path of the Peasant\n";
-    s += "\t\t No special aptitudes\n";
+    s = "\n::::::::::What path will thou choose?::::::::::\n";
+    s += "1: Path of the Knight\n";
+    s += "\t Superior defense stats\n";
+    s += "2: Path of the Gladiator\n";
+    s += "\t Unrivaled in strength\n";
+    s += "3: Path of the Archer\n";
+    s += "\t Effective attacks and special attacks\n";
+    s += "4: Path of the Peasant\n";
+    s += "\t No special aptitudes\n";
     s += "Selection: ";
     
     System.out.println(s);
     
-    int playerClass = 0;
+    int classChoice = 0;
     
     try {
-	    playerClass = Integer.parseInt( in.readLine() );
+	    classChoice = Integer.parseInt( in.readLine() );
     } catch ( IOException e ) { }
     
     //instantiate the player's character
-    if (playerClass == 1) {
+    if (classChoice == 1) {
     	pat = new Knight(name);
     }
-    else if (playerClass == 2) {
+    else if (classChoice == 2) {
     	pat = new Gladiator(name);
     }
-    else if (playerClass == 3) {
+    else if (classChoice == 3) {
     	pat = new Archer(name);
     }
-    else if (playerClass == 4) {
+    else if (classChoice == 4) {
     	pat = new Protagonist(name);
     }
 
@@ -123,8 +123,23 @@ public class YoRPG
 	    System.out.println( "Nothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
-
-	    smaug = new Monster();
+	    
+	    // Generate a random monster
+	    double monsterDeterminer = Math.random();
+	    String currentEnemy = "";
+	    
+	    if (monsterDeterminer < 0.4) { // 40% chance
+	    	smaug = new Slime();
+	    	currentEnemy = "Slime";
+	    }
+	    else if (monsterDeterminer < 0.8) { // 40& chance
+	    	smaug = new Wolf();
+	    	currentEnemy = "Wolf";
+	    }
+	    else if (monsterDeterminer < 1) { // 20% chance
+	    	smaug = new Thief();
+	    	currentEnemy = "Thief";
+	    }
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -149,7 +164,7 @@ public class YoRPG
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
+        System.out.println( "\n" + "Ye Olde " + currentEnemy + " smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
         System.out.println( "\nYou have " + pat.getHP() + " health.");
         
