@@ -11,11 +11,20 @@ The Gladiator class starts with 40-85 Strength and an attack rating of 0.5.
 The Knight class starts with 300 HP and 55 Defense.
 
 
-Summary
+## Summary
 
-|Stats	  |Peasant  |Archer   |Gladiator|Knight   |      
-|:-------:|:-------:|:-------:|:-------:|:-------:|
-|HP		  |250      |250      |250      |300      |
-|Strength |20-65    |20-65    |20-65    |20-65    |
-|Defense  |40       |40       |40       |55       |
-|Attack Rating|0.4      |0.7       |0.5       |0.4       |
+### Player classes
+|Stats	      |Peasant  |Archer   |Gladiator|Knight   |      
+|:-----------:|:-------:|:-------:|:-------:|:-------:|
+|HP		      |250      |250      |250      |300      |
+|Strength     |20-65    |20-65    |20-65    |20-65    |
+|Defense      |40       |40       |40       |55       |
+|Attack Rating|0.4      |0.7      |0.5      |0.4      |
+
+### Enemies
+|Stats	      |Slime    |Wolf     |Thief    |  
+|:-----------:|:-------:|:-------:|:-------:|
+|HP		      |50       |250      |175      |
+|Strength     |40-55    |50-65    |55-80    |
+|Defense      |20       |30       |45       |
+|Attack Rating|1        |1        |1        |
