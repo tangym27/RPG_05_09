@@ -26,7 +26,7 @@ public class Protagonist extends Character {
 		defense = baseDefense;
 		strength = baseStrength;
     }
-     public String toString(){
-    return "Your stats (ordered by HP, strength, defense and attackRating) are as follows \n" + HP + "\n"+ strength + "\n"+ defense + "\n"+ attackRating;
-
-     }}
+    public String toString(){
+    	return "Your stats (ordered by HP, strength, defense and attackRating) are as follows \n" + HP + "\n"+ strength + "\n"+ defense + "\n"+ attackRating;
+    }
+}
