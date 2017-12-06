@@ -24,7 +24,7 @@ The Knight class starts with 300 HP and 55 Defense.
 ### Enemies
 |Stats	      |Slime    |Wolf     |Thief    |  
 |:-----------:|:-------:|:-------:|:-------:|
-|HP		      |50       |250      |175      |
+|HP           |50       |125      |175      |
 |Strength     |40-55    |50-65    |55-80    |
 |Defense      |20       |30       |45       |
 |Attack Rating|1        |1        |1        |
