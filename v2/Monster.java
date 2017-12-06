@@ -6,11 +6,10 @@ public class Monster extends Character {
 		defense = 20;
 		attackRating = 1;
 	}
-    public String toString(){
-	return super.toString()+" ";
+	     public String toString(){
+       return "The monster's stats (ordered by HP, strength, defense and attackRating) are as follows \n" + HP + "\n"+ strength + "\n"+ defense + "\n"+ attackRating;
     }
-
-    
-
+   
+	 
 }
 

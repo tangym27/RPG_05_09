@@ -10,6 +10,7 @@ public class Protagonist extends Character {
         baseStrength = strength = (int)(20 + 45 * Math.random());
         baseDefense = defense = 40;
         attackRating = 0.4;
+	//	System.out.println(toString());
     }
 
     public String getName() {
@@ -25,4 +26,7 @@ public class Protagonist extends Character {
 		defense = baseDefense;
 		strength = baseStrength;
     }
-}
+     public String toString(){
+    return "Your stats (ordered by HP, strength, defense and attackRating) are as follows \n" + HP + "\n"+ strength + "\n"+ defense + "\n"+ attackRating;
+
+     }}
