@@ -1,4 +1,4 @@
-public class Thief extends Character {
+public class Thief extends Monster {
 	
     public Thief(){
         HP = 175;
