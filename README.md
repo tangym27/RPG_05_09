@@ -11,10 +11,10 @@ The Knight class starts with 300 HP and 55 Defense.
 
 Summary
 
-                Protagonist            Archer            Gladiator            Knight                              
-HP                  250                 250                 250                300                        
-Strength          20 - 65             20 - 65             40 - 85            20 - 65                           
-Defense             40                  40                  40                 55             
-Attack Rating       0.4                 0.4                 0.5                0.4        
-Specialize     + 15 Strength      + 15 Strength        + 15 Strength       + 15 Strength
-                - 5 Defense        - 5 Defense          - 5 Defense         - 5 Defense                                                     
+Stats   Protagonist      Archer      Gladiator      Knight                              
+HP:                  250,                 250,                 250,                300                        
+Strength:          20 - 65,             20 - 65,             40 - 85,            20 - 65                           
+Defense:             40,                  40,                  40,                 55             
+Attack Rating:       0.4,                 0.4,               0.5,                0.4        
+Specialize:     + 15 Strength and - 5 Defense,      + 20 Strength and - 5 Defense,        + 15 Strength and - 5 Defense,       + 15 Strength and - 5 Defense
+                                   
