@@ -8,6 +8,10 @@ public class Character {
 		return HP > 0;
 	}
 
+	protected int getHP() {
+		return HP;
+	}
+
 	protected int getDefense() {
 		return defense;
 	}
