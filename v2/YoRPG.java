@@ -72,8 +72,38 @@ public class YoRPG
 	    name = in.readLine();
     } catch ( IOException e ) { }
 
+    s = "\nWhat path will thou choose?: \n";
+    s += "\t1: Path of the Knight\n";
+    s += "\t\t Superior defense stats\n";
+    s += "\t2: Path of the Gladiator\n";
+    s += "\t\t Unrivaled in strength\n";
+    s += "\t3: Path of the Archer\n";
+    s += "\t\t Effective attacks and special attacks\n";
+    s += "\t4: Path of the Peasant\n";
+    s += "\t\t No special aptitudes\n";
+    s += "Selection: ";
+    
+    System.out.println(s);
+    
+    int playerClass = 0;
+    
+    try {
+	    playerClass = Integer.parseInt( in.readLine() );
+    } catch ( IOException e ) { }
+    
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if (playerClass == 1) {
+    	pat = new Knight(name);
+    }
+    else if (playerClass == 2) {
+    	pat = new Gladiator(name);
+    }
+    else if (playerClass == 3) {
+    	pat = new Archer(name);
+    }
+    else if (playerClass == 4) {
+    	pat = new Protagonist(name);
+    }
 
   }//end newGame()
 
@@ -90,7 +120,7 @@ public class YoRPG
     int d1, d2;
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
-	    System.out.println( "\nNothing to see here. Move along!" );
+	    System.out.println( "Nothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
@@ -121,6 +151,8 @@ public class YoRPG
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
+        System.out.println( "\nYou have " + pat.getHP() + " health.");
+        
 	    }//end while
 
 	    //option 1: you & the monster perish
@@ -157,13 +189,13 @@ public class YoRPG
 
     int encounters = 0;
 
-     while( encounters < MAX_ENCOUNTERS ) {
+    while( encounters < MAX_ENCOUNTERS ) {
         if ( !game.playTurn() )
              break;
          encounters++;
          System.out.println();
-    // }
+    }
 
-    System.out.println( "Thy game doth be over." );
-  } 
-  }}
+    System.out.println( "Thy game doth be over.");
+  }
+}
