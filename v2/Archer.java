@@ -8,7 +8,7 @@ public class Archer extends Protagonist {
 	
     public void specialize() {
 		defense -= 5;
-		strength += 20;
+		strength += 25;
      }
 
     public String toString(){
