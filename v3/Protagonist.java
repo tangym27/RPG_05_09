@@ -1,4 +1,4 @@
-public class Protagonist extends Character {
+public abstract class Protagonist extends Character {
     protected String name;
     protected int baseDefense;
     protected int baseStrength;
@@ -26,7 +26,5 @@ public class Protagonist extends Character {
 		defense = baseDefense;
 		strength = baseStrength;
     }
-    public String toString(){
-    	return "Your stats (ordered by HP, strength, defense and attackRating) are as follows \n" + HP + "\n"+ strength + "\n"+ defense + "\n"+ attackRating;
-    }
+    public abstract String toString();
 }

@@ -7,6 +7,11 @@ public class Knight extends Protagonist {
 	}
 	
     public String toString(){
-    	return "You are an knight. "+ super.toString();
+    	return "You are an knight. "+ System.lineSeparator() +
+		"Your stats are as follows: \n" +
+		"HP: " + HP + "\n" + 
+		"STR: " + strength + "\n" +
+		"DEF: " + defense + "\n" +
+		"Attack Multiplier: " + attackRating;
     }
 }

@@ -7,6 +7,11 @@ public class Gladiator extends Protagonist {
 	}
 	
     public String toString(){
-    	return "You are an gladiator. "+ super.toString();
+    	return "You are an gladiator. "+ System.lineSeparator() +
+		"Your stats are as follows: \n" +
+		"HP: " + HP + "\n" + 
+		"STR: " + strength + "\n" +
+		"DEF: " + defense + "\n" +
+		"Attack Multiplier: " + attackRating;
     }
 }
