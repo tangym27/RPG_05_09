@@ -79,8 +79,6 @@ public class YoRPG
     s += "\t Unrivaled in strength\n";
     s += "3: Path of the Archer\n";
     s += "\t Effective attacks and special attacks\n";
-    s += "4: Path of the Peasant\n";
-    s += "\t No special aptitudes\n";
     s += "Selection: ";
     
     System.out.println(s);
@@ -100,9 +98,6 @@ public class YoRPG
     }
     else if (classChoice == 3) {
     	pat = new Archer(name);
-    }
-    else if (classChoice == 4) {
-    	pat = new Protagonist(name);
     }
 
   }//end newGame()

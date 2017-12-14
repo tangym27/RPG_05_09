@@ -14,4 +14,14 @@ public class Knight extends Protagonist {
 		"DEF: " + defense + "\n" +
 		"Attack Multiplier: " + attackRating;
     }
+    
+    public void normalize() {
+		defense = baseDefense;
+		strength = baseStrength;
+    }
+    
+    public void specialize()  {
+		defense -= 5;
+		strength += 15;
+     }
 }

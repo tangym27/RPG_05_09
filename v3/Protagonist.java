@@ -1,3 +1,9 @@
+/*.\ Errors:
+ * Protagonist.java:1: error: Protagonist is not abstract and does not override abstract method toString() in Protagonist
+ * YoRPG.java:19: error: Protagonist is abstract; cannot be instantiated
+ * .\Knight.java:1: error: Knight is not abstract and does not override abstract method toString() in Protagonist
+ */
+
 public abstract class Protagonist extends Character {
     protected String name;
     protected int baseDefense;
@@ -17,14 +23,9 @@ public abstract class Protagonist extends Character {
         return name;
     }
 
-    public void specialize() {
-		defense -= 5;
-		strength += 15;
-     }
+    public abstract void specialize();
 
-    public void normalize() {
-		defense = baseDefense;
-		strength = baseStrength;
-    }
+    public abstract void normalize();
+    
     public abstract String toString();
 }
