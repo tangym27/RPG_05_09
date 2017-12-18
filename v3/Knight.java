@@ -1,5 +1,6 @@
 public class Knight extends Protagonist {
 
+	/* CONSTRUCTOR */
 	public Knight(String s) {
 		super(s);
 		HP = 300;
