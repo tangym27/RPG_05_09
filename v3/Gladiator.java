@@ -6,22 +6,22 @@ public class Gladiator extends Protagonist {
 		attackRating = 0.5;
 	}
 	
-    public String toString() {
-    	return "You are an gladiator. "+ System.lineSeparator() +
-		"Your stats are as follows: \n" +
-		"HP: " + HP + "\n" + 
-		"STR: " + strength + "\n" +
-		"DEF: " + defense + "\n" +
-		"Attack Multiplier: " + attackRating;
-    }
+ 	public String toString() {
+    		return "You are an gladiator. "+ System.lineSeparator() +
+			"Your stats are as follows: \n" +
+			"HP: " + HP + "\n" + 
+			"STR: " + strength + "\n" +
+			"DEF: " + defense + "\n" +
+			"Attack Multiplier: " + attackRating;
+ 	}
 
-    public void normalize() {
+  	public void normalize() {
 		defense = baseDefense;
 		strength = baseStrength;
-    }
+ 	}
     
-    public void specialize()  {
+   	public void specialize()  {
 		defense -= 5;
 		strength += 15;
-     }
+  	}
 }
