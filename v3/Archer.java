@@ -1,6 +1,7 @@
 public class Archer extends Protagonist {
 
-	public Archer(String s) {
+    /* CONSTRUCTOR */
+    public Archer(String s) {
 		super(s);
 		attackRating = 0.7;
 	}
