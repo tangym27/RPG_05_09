@@ -1,5 +1,6 @@
 public class Gladiator extends Protagonist {
 
+	/* CONSTRUCTOR */
 	public Gladiator(String s) {
 		super(s);
 		baseStrength = (int)(40 + 45 * Math.random());
